@@ -11,4 +11,10 @@ if ($age >= 18) {
     echo 'Mineur';
 }
 
-$status = 
+$status = ($age >= 18) ? 'Majeur' : 'Mineur';
+
+echo '$status';
+
+for ($i = 1; $i <= 10; $i++){
+    echo "\n$i";
+}
