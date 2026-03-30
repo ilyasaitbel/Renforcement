@@ -1,3 +1,8 @@
+//PARTIE 1 -- Documentation & Exercices Debutants
+
+
+//Exercice 1 -- Ma premiere liste
+
 let taches = []
 taches.push('Coder', 'Tester', 'Deployer')
 taches.unshift('Analyser')
@@ -9,6 +14,8 @@ taches.splice(2,1,'Revue de code')
 console.log(taches)
 console.log('derniere retiree ' + derniere)
 console.log('premiere retiree ' + premiere)
+
+//Exercice 2 -- Affichage d'une liste 
 
 const prenoms = ['Alice', 'Bob', 'Clara', 'David', 'Eva'];
 prenoms.forEach((element , index) => {
@@ -24,6 +31,8 @@ prenoms.forEach((element) => {
     if(element.length > 3)
         console.log(element)
 });
+
+//Exercice 3 -- Transformation de donnees
 
 const temperatures = [0, 15, 22, 35, -5, 100];
 
@@ -53,12 +62,16 @@ const objet = temperatures.map(t => {
 })
 console.log(objet)
 
+//Exercice 4 -- Filtrage simple
+
 const mots = ['chat','cheval','chien','lion','chameau','cobra','loup','chevre'];
 
 ch = mots.filter(mot => mot.startsWith('ch'));
 console.log(ch)
 more5letters = ch.filter(l => l.length > 5);
 console.log(more5letters)
+
+//Exercice 5 -- Recherche dans un catalogue
 
 const catalogue = [
 { ref: 'A01', nom: 'Stylo bille', prix: 1.20 },
@@ -79,6 +92,8 @@ if(prod === undefined)
     console.log('elle n existe pas le produit')
 else
     console.log('le produit trouve' , prod)
+
+//Exercice 6 -- Premiers calculs avec reduce
 
 // // reduce(callback, valeurInitiale)
 // // callback recoit : (accumulateur, elementCourant, index, tableau)
@@ -101,7 +116,84 @@ const moyen = notes.reduce((acc,n,i,arr) => acc + n / arr.length,0)
 
 const moyenn = somme / notes.length
 console.log(somme) 
-console.log(moyenn)
+console.log(moyen)
 
 const plushaute = notes.reduce((acc, n) => n > acc ? n : acc)
 console.log(plushaute)
+
+let fruits = ["apple","orange","orange","banane","orange","apple"]
+
+let count = fruits.reduce((acc,cur) => {
+    acc[cur] = (acc[cur] ?? 0) + 1
+    return acc;
+},{})
+console.log(count)
+
+const nb = [1,4,7,2,3,7,5,6];
+
+const max = nb.reduce((acc,cur) => acc > cur ? acc : cur );
+console.log(max);
+
+
+// const trie_ext = extentions.sort((a,b) => b.prix - a.prix)
+// console.log(trie_ext);  
+
+const extentions = [{nom:"fridje",prix:500},{nom:"souris",prix:50},{nom:"clavie",prix:30}].sort()
+extentions.sort((a,b) => a.nom.localeCompare(b.nom))
+console.log(extentions);
+
+//Exercice 7 -- Tris simples 
+
+const scores = [45, 12, 78, 3, 99, 56, 23, 67];
+const noms = ['Zoe','Alice','Marc','Bob','Yasmine','Chloe'];
+
+triezScoreCroissant = scores.sort((a,b) => a - b)
+console.log(triezScoreCroissant);
+triezScoreDecroissant = scores.sort((a,b) => b - a).slice(0,3)
+console.log(triezScoreDecroissant)
+
+noms.sort((a,b) => a.localeCompare(b))
+console.log(noms);
+
+// const arr = [1, 2, 3, 4, 5];
+
+// arr.splice(2, 2,5,6,7,8,9);
+
+// console.log(arr);
+
+let fruitss = ["pomme","kiwi","banane"]
+let legumes = ["tomate","carotte"]
+let aliments = [...fruitss, ...legumes]
+console.log(aliments);
+
+let copiepanier = aliments.push("cerise");
+
+console.log(copiepanier); //nombre aliments
+console.log(aliments); //arr
+
+let nbr = [3,1,4,1,5,9,2,6]
+
+let maxx = Math.max(...nbr)
+let min = Math.min(...nbr)
+console.log("le max :" + maxx + "\nle min :" + min)
+
+const couleurs=['rouge','vert','bleu','jaune']
+
+const [premier, deuxième, ...autresCouleures] = couleurs;
+
+console.log(premier)
+console.log(deuxième)
+console.log(autresCouleures)
+
+let [x,y] = [10,20];
+console.log('avant \nx :' + x + '\ny :' + y);
+[x,y] = [y,x];
+console.log(' apres\nx :' + x + '\ny :' + y);
+
+const data=[42]
+
+const [val, unite='kg'] = data
+
+console.log(val + '' + unite )
+
+//PARTIE 2 -- Challenges Intermediaires

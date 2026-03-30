@@ -33,15 +33,13 @@ for (let i = 0 ; i<coureses.length ; i++)
 }
 console.log(sum);
 
-
-coureses[0].quantite = 2;
-coureses[1].quantite = 3;
-coureses[2].quantite = 4;
-
 let somme = 0;
 for (let i = 0 ; i<coureses.length ; i++)
 {
-    somme = somme + coureses[i].prix * coureses[i].quantite
+    coureses[i].quantite = 2
+    coures_total = coureses[i].prix * coureses[i].quantite
+    console.log(coures_total)
+    somme = somme + coures_total
 }
 console.log(somme)
 
@@ -51,3 +49,37 @@ let produit = {
     categorie:"it"
 }
 console.log('Le produit ' + produit.nom + ' coute ' + produit.prix + ' dh (categorie: ' + produit.categorie + ')');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
