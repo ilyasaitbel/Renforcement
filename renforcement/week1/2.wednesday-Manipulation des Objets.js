@@ -32,3 +32,17 @@ function getProp(obj, cle) {
 console.log(getProp(fiche, 'ville'));
 console.log(getProp(fiche, 'salaire'));
 
+function renommerCle(obj, ancienne, nouvelle){
+  const newObj = {};
+
+  for (let key in obj) {
+    if (key === ancienne) {
+      newObj[nouvelle] = obj[key];
+    } else 
+      newObj[key] = obj[key];
+  }
+
+  return newObj;
+}
+
+console.log(renommerCle(fiche,'ville','country'))
