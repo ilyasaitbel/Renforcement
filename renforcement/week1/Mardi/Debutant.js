@@ -195,5 +195,3 @@ const data=[42]
 const [val, unite='kg'] = data
 
 console.log(val + '' + unite )
-
-//PARTIE 2 -- Challenges Intermediaires
