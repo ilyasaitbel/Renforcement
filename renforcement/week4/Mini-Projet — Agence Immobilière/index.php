@@ -3,7 +3,7 @@ require_once 'models/Bien.php';
 require_once 'models/Appartement.php';
 require_once 'models/Maison.php';
 require_once 'models/LocalCommercial.php';
-require_once 'Agence.php';
+require_once 'models/Agence.php';
 
 // Création agence
 $agence = new Agence('Immo Prestige', 7.5);
